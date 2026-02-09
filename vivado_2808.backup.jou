@@ -1,0 +1,740 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan 29 17:33:19 2026
+# Process ID         : 2808
+# Current directory  : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent30788 C:\Users\PC\Desktop\fec_verf\prj\fec_lasercom\fec_lasercom.xpr
+# Log file           : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/vivado.log
+# Journal file       : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom\vivado.jou
+# Running On         : FSO-A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68263 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78464 MB
+# Available Virtual  : 33099 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/fec_rx_fpga_top.v w ]
+add_files C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/fec_rx_fpga_top.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/fec_rx.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/uart_rx.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/uart_tx.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fec_rx_fpga_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/axis_fifo_sync.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/gearbox_32to8.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/rs_decode_backend.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fps/EnDec/project_1/project_1.srcs/sim_1/new/rs_Deinterleaver_xpm.v
+update_compile_order -fileset sources_1
+# 1. 检查是否有打开的工程
+if {[current_project -quiet] eq ""} {
+    puts "【错误】请先打开一个 Vivado 工程！"
+} else {
+    puts "------------------------------------------------"
+    puts "开始将外部引用文件导入(Copy)到本工程..."
+    
+    # 2. 执行导入操作
+    # -force 参数确保如果工程目录下有同名文件则覆盖
+    # import_files 会自动处理 Design Sources, Simulation Sources 和 Constraints
+    import_files -force
+    
+    puts "文件导入操作完成。"
+    puts "------------------------------------------------"
+    
+    # 3. 验证检查
+    # 获取所有源文件
+    set all_files [get_files]
+    set remote_count 0
+    
+    # 获取工程目录路径
+    set proj_dir [get_property DIRECTORY [current_project]]
+    
+    foreach f $all_files {
+        # 检查文件路径是否包含工程路径
+        # 注意：这里做简单的字符串匹配检查
+        if {[string first $proj_dir $f] == -1} {
+            # 排除掉 Xilinx IP核文件，因为它们本来就可能在外面，或者是指向IP库的
+            if {[string match "*.xci" $f] == 0} {
+                puts "【警告】文件似乎仍在工程外部: $f"
+                incr remote_count
+            }
+        }
+    }
+    
+    if {$remote_count == 0} {
+        puts "【成功】所有源文件现已包含在工程文件夹内！"
+    } else {
+        puts "【注意】仍有 $remote_count 个文件可能未被复制，请检查是否为IP核或系统库文件。"
+    }
+    puts "------------------------------------------------"
+}
+# 1. 检查是否有打开的工程
+if {[current_project -quiet] eq ""} {
+    puts "【错误】请先打开一个 Vivado 工程！"
+} else {
+    puts "------------------------------------------------"
+    puts "开始将外部引用文件导入(Copy)到本工程..."
+    
+    # 2. 执行导入操作
+    # -force 参数确保如果工程目录下有同名文件则覆盖
+    # import_files 会自动处理 Design Sources, Simulation Sources 和 Constraints
+    import_files -force
+    
+    puts "文件导入操作完成。"
+    puts "------------------------------------------------"
+    
+    # 3. 验证检查
+    # 获取所有源文件
+    set all_files [get_files]
+    set remote_count 0
+    
+    # 获取工程目录路径
+    set proj_dir [get_property DIRECTORY [current_project]]
+    
+    foreach f $all_files {
+        # 检查文件路径是否包含工程路径
+        # 注意：这里做简单的字符串匹配检查
+        if {[string first $proj_dir $f] == -1} {
+            # 排除掉 Xilinx IP核文件，因为它们本来就可能在外面，或者是指向IP库的
+            if {[string match "*.xci" $f] == 0} {
+                puts "【警告】文件似乎仍在工程外部: $f"
+                incr remote_count
+            }
+        }
+    }
+    
+    if {$remote_count == 0} {
+        puts "【成功】所有源文件现已包含在工程文件夹内！"
+    } else {
+        puts "【注意】仍有 $remote_count 个文件可能未被复制，请检查是否为IP核或系统库文件。"
+    }
+    puts "------------------------------------------------"
+}
+reset_target all [get_ips *]
+generate_target all [get_ips *]
+# ==============================================================================
+# Vivado 工程源文件目录结构重构脚本
+# 功能：将散乱或深层嵌套的用户代码移动到工程根目录下的 /rtl 文件夹中
+# ==============================================================================
+# 1. 设置目标目录名称 (默认: rtl)
+set target_folder_name "rtl"
+# 获取当前工程路径
+set proj_dir [get_property DIRECTORY [current_project]]
+set new_src_dir [file join $proj_dir $target_folder_name]
+puts "--------------------------------------------------------"
+puts "【步骤 1】正在创建标准目录: $new_src_dir"
+# 如果目录不存在则创建
+if {![file exists $new_src_dir]} {
+    file mkdir $new_src_dir
+    puts " -> 目录已创建。"
+} else {
+    puts " -> 目录已存在，将合并文件到此目录。"
+}
+puts "--------------------------------------------------------"
+puts "【步骤 2】开始扫描并移动源文件..."
+# 获取所有 Design Sources (排除仿真文件和约束文件)
+# 这里的过滤条件是：在 sources_1 集合中
+set files [get_files -of_objects [get_filesets sources_1]]
+set move_count 0
+foreach f $files {
+    # 获取文件名和扩展名
+    set fname [file tail $f]
+    set fext [file extension $fname]
+    
+    # --- 过滤器：只处理用户代码 ---
+    # 排除 Xilinx IP (.xci), Block Design (.bd), 此时也不处理 .xdc
+    if {$fext == ".xci" || $fext == ".bd" || $fext == ".xdc" || $fext == ".dcp"} {
+        continue
+    }
+    
+    # 排除已经在目标目录下的文件
+    set f_normalized [file normalize $f]
+    set new_src_dir_normalized [file normalize $new_src_dir]
+    if {[string first $new_src_dir_normalized $f_normalized] != -1} {
+        continue
+    }
+
+    # --- 执行移动逻辑 ---
+    set new_file_path [file join $new_src_dir $fname]
+    
+    puts " -> 处理: $fname"
+    
+    # A. 物理复制文件
+    # 使用 -force 覆盖旧文件（如果有）
+    if {[catch {file copy -force $f $new_file_path} err]} {
+        puts "    [错误] 无法复制文件: $err"
+        continue
+    }
+    
+    # B. 从工程中移除旧引用
+    remove_files $f
+    
+    # C. 添加新文件引用
+    # -norecurse: 不递归扫描子目录
+    # -scan_for_includes: 扫描头文件包含
+    add_files -norecurse -scan_for_includes $new_file_path
+    
+    incr move_count
+}
+puts "--------------------------------------------------------"
+if {$move_count > 0} {
+    puts "【完成】成功重构 $move_count 个文件！"
+    puts "所有代码现已位于: $new_src_dir"
+    puts "注意：原来的深层文件夹（imports/...）依然保留在硬盘上，"
+    puts "确认新结构无误后，你可以手动删除它们以清理空间。"
+} else {
+    puts "【提示】没有发现需要移动的文件（可能文件已经在 rtl 目录中，或全是 IP 核）。"
+}
+puts "--------------------------------------------------------"
+# 自动更新编译顺序
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+puts "---------------- 检查文件路径 ----------------"
+foreach f [get_files *.v] {
+    # 只显示非 IP 核的源文件
+    if {[string match "*.gen*" $f] == 0} {
+        puts $f
+    }
+}
+puts "--------------------------------------------"
+puts "---------------- 检查 IP 核 (.xci) 路径 ----------------"
+foreach f [get_files *.xci] {
+    puts $f
+}
+puts "--------------------------------------------------------"
+reset_run rs_decoder_0_synth_1
+reset_run clk_wiz_sys_synth_1
+reset_run async_fifo_32w_32r_synth_1
+reset_run gtwizard_ultrascale_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+puts "---------------- 检查约束文件 (.xdc) 路径 ----------------"
+# 获取 constrs_1 约束集中的所有 xdc 文件
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    puts $f
+}
+puts "--------------------------------------------------------"
+# ==============================================================================
+# 约束文件(.xdc) 整理脚本
+# ==============================================================================
+set target_folder_name "constraints"
+set proj_dir [get_property DIRECTORY [current_project]]
+set new_xdc_dir [file join $proj_dir $target_folder_name]
+# 1. 创建文件夹
+if {![file exists $new_xdc_dir]} {
+    file mkdir $new_xdc_dir
+}
+# 2. 移动 XDC 文件
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    # 只处理 .xdc 文件，且排除 IP 核生成的 (ooc/board/clocks)
+    if {[string match "*.xdc" $f] && ![string match "*ooc.xdc" $f] && ![string match "*clocks.xdc" $f] && ![string match "*board.xdc" $f]} {
+        
+        set fname [file tail $f]
+        set new_file_path [file join $new_xdc_dir $fname]
+        
+        puts " -> 正在移动约束文件: $fname"
+        
+        # 复制 & 移除旧引用 & 添加新引用
+        if {[catch {file copy -force $f $new_file_path} err]} {
+            puts "    [错误] 复制失败: $err"
+        } else {
+            remove_files $f
+            add_files -fileset constrs_1 -norecurse $new_file_path
+            puts "    [成功] 已移动到 /constraints 目录"
+        }
+    }
+}
+puts "---------------- 再次检查约束文件路径 ----------------"
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    puts $f
+}
+puts "----------------------------------------------------"
+puts "---------------- 再次检查约束文件路径 ----------------"
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    puts $f
+}
+puts "----------------------------------------------------"
+# ==============================================================================
+# 约束文件(.xdc) 整理脚本 (修正版)
+# ==============================================================================
+set target_folder_name "constraints"
+set proj_dir [get_property DIRECTORY [current_project]]
+set new_xdc_dir [file join $proj_dir $target_folder_name]
+if {![file exists $new_xdc_dir]} { file mkdir $new_xdc_dir }
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    # 排除 IP 生成文件
+    if {[string match "*.xdc" $f] && ![string match "*ooc.xdc" $f] && ![string match "*clocks.xdc" $f] && ![string match "*board.xdc" $f]} {
+        
+        set fname [file tail $f]
+        set new_file_path [file join $new_xdc_dir $fname]
+        
+        # 检查是否已经移动过了，防止重复报错
+        if {[string first $new_xdc_dir [file normalize $f]] != -1} {
+            puts " -> [file tail $f] 已经在目标目录中，跳过。"
+            continue
+        }
+
+        puts " -> 正在移动约束文件: $fname"
+        
+        if {[catch {file copy -force $f $new_file_path} err]} {
+            puts "    \[错误\] 复制失败: $err"
+        } else {
+            remove_files $f
+            add_files -fileset constrs_1 -norecurse $new_file_path
+            # ★★★ 修正了这里：去掉了方括号，或者使用了转义 ★★★
+            puts "    \[成功\] 已移动到 /constraints 目录"
+        }
+    }
+}
+puts "---------------- 再次检查约束文件路径 ----------------"
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+    puts $f
+}
+puts "----------------------------------------------------"
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+close [ open C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/global_defines.vh w ]
+add_files C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/global_defines.vh
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_Deinterleaver_xpm.v]
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+launch_runs impl_1 -jobs 32
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -jobs 32
+wait_on_run impl_1
+set_property CONFIG.erase {false} [get_ips rs_decoder_0]
+generate_target all [get_files  C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/rs_decoder_0/ip/rs_decoder_0/rs_decoder_0.xci]
+catch { config_ip_cache -export [get_ips -all rs_decoder_0] }
+export_ip_user_files -of_objects [get_files C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/rs_decoder_0/ip/rs_decoder_0/rs_decoder_0.xci] -no_script -sync -force -quiet
+reset_run rs_decoder_0_synth_1
+launch_runs rs_decoder_0_synth_1 -jobs 32
+wait_on_run rs_decoder_0_synth_1
+export_simulation -lib_map_path [list {modelsim=C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.cache/compile_simlib/modelsim} {questa=C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.cache/compile_simlib/questa} {riviera=C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.cache/compile_simlib/riviera} {activehdl=C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.cache/compile_simlib/activehdl}] -of_objects [get_files C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/rs_decoder_0/ip/rs_decoder_0/rs_decoder_0.xci] -directory C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.ip_user_files -ipstatic_source_dir C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+# ==============================================================================
+# Vivado 双顶层并行编译脚本 (TX + RX)
+# 功能：自动创建独立运行 -> 并行编译 -> 自动导出 Bitstream
+# ==============================================================================
+# 1. 配置参数
+set tx_top "fec_tx_fpga_top"
+set rx_top "fec_rx_fpga_top"
+set jobs_cnt 8  ;# 根据你的CPU核心数调整，建议 8 或 12
+puts "--------------------------------------------------------"
+puts " 开始配置双顶层并行编译环境..."
+puts " TX Top: $tx_top"
+puts " RX Top: $rx_top"
+puts "--------------------------------------------------------"
+# 获取默认的 run 配置作为模板 (通常是 synth_1 和 impl_1)
+set base_synth "synth_1"
+set base_impl  "impl_1"
+set flow_synth [get_property FLOW [get_runs $base_synth]]
+set flow_impl  [get_property FLOW [get_runs $base_impl]]
+set part_name  [get_property PART [current_project]]
+# ==============================================================================
+# 函数：创建或获取 Run
+# ==============================================================================
+proc prepare_run {run_prefix top_module base_s base_i flow_s flow_i part} {
+    set s_run "synth_${run_prefix}"
+    set i_run "impl_${run_prefix}"
+
+    # 1. 准备综合 Run
+    if {[get_runs -quiet $s_run] == ""} {
+        puts " -> 创建综合 Run: $s_run"
+        create_run $s_run -flow $flow_s -part $part
+    }
+    # 强制指定该 Run 的顶层模块 (关键步骤)
+    set_property TOP $top_module [get_runs $s_run]
+    
+    # 2. 准备实现 Run
+    if {[get_runs -quiet $i_run] == ""} {
+        puts " -> 创建实现 Run: $i_run"
+        create_run $i_run -parent_run $s_run -flow $flow_i -part $part
+    }
+    
+    return $i_run
+}
+# ==============================================================================
+# 2. 准备 TX 和 RX 的运行环境
+# ==============================================================================
+set tx_impl_run [prepare_run "tx" $tx_top $base_synth $base_impl $flow_synth $flow_impl $part_name]
+# ==============================================================================
+# Vivado 双顶层并行编译脚本 (修正版)
+# 功能：利用"切换-发射"机制实现并行编译
+# ==============================================================================
+# 1. 配置参数
+set tx_top "fec_tx_fpga_top"
+set rx_top "fec_rx_fpga_top"
+set jobs_cnt 8  ;# 根据 CPU 核心数调整
+puts "--------------------------------------------------------"
+puts " 开始配置双顶层并行编译环境 (Switch-and-Launch 模式)..."
+puts "--------------------------------------------------------"
+# 获取基础配置
+set base_synth "synth_1"
+set base_impl  "impl_1"
+set flow_synth [get_property FLOW [get_runs $base_synth]]
+set flow_impl  [get_property FLOW [get_runs $base_impl]]
+set part_name  [get_property PART [current_project]]
+# ==============================================================================
+# 函数：准备 Run (不设置 TOP，只创建对象)
+# ==============================================================================
+proc prepare_run_obj {run_prefix base_s base_i flow_s flow_i part} {
+    set s_run "synth_${run_prefix}"
+    set i_run "impl_${run_prefix}"
+
+    if {[get_runs -quiet $s_run] == ""} {
+        puts " -> 创建综合 Run: $s_run"
+        create_run $s_run -flow $flow_s -part $part
+    }
+    
+    if {[get_runs -quiet $i_run] == ""} {
+        puts " -> 创建实现 Run: $i_run"
+        create_run $i_run -parent_run $s_run -flow $flow_i -part $part
+    }
+    return $i_run
+}
+# 1. 准备运行对象
+set tx_impl_run [prepare_run_obj "tx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+set rx_impl_run [prepare_run_obj "rx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+# ==============================================================================
+# 2. 发射 TX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [1/2] 正在配置并启动 TX 任务..."
+# A. 切换全局 Top 为 TX
+set_property top $tx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 TX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *tx*"]
+launch_runs $tx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> TX 任务已在后台启动。"
+# ==============================================================================
+# 3. 发射 RX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [2/2] 正在配置并启动 RX 任务..."
+# A. 切换全局 Top 为 RX
+set_property top $rx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 RX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *rx*"]
+launch_runs $rx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> RX 任务已在后台启动。"
+# ==============================================================================
+# 4. 等待结果并导出
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " 双任务并行编译中，脚本将挂起等待结果 (请勿关闭 Vivado)..."
+# 等待两个运行完成
+wait_on_run $tx_impl_run
+puts "--- 正在修复 IP 核状态 ---"
+# 1. 重置 fifo_0 的生成状态
+reset_target all [get_ips fifo_0]
+# 2. 重新生成 fifo_0 的所有输出文件 (Verilog wrapper 等)
+generate_target all [get_ips fifo_0]
+# 3. (关键) 导出 IP 用户文件，确保仿真和综合能找到它
+export_ip_user_files -of_objects [get_ips fifo_0] -no_script -sync -force -quiet
+# 4. 创建 IP 的独立综合任务 (Out-of-Context Run) 并等待它完成
+# 这一步是为了确保 IP 自己先编译通过，再编译顶层
+create_ip_run [get_ips fifo_0]
+launch_runs [get_runs fifo_0_synth_1]
+wait_on_run fifo_0_synth_1
+puts "--- IP 核修复完成，准备重新综合顶层 ---"
+# ==============================================================================
+# Vivado 双顶层并行编译脚本 (修正版)
+# 功能：利用"切换-发射"机制实现并行编译
+# ==============================================================================
+# 1. 配置参数
+set tx_top "fec_tx_fpga_top"
+set rx_top "fec_rx_fpga_top"
+set jobs_cnt 8  ;# 根据 CPU 核心数调整
+puts "--------------------------------------------------------"
+puts " 开始配置双顶层并行编译环境 (Switch-and-Launch 模式)..."
+puts "--------------------------------------------------------"
+# 获取基础配置
+set base_synth "synth_1"
+set base_impl  "impl_1"
+set flow_synth [get_property FLOW [get_runs $base_synth]]
+set flow_impl  [get_property FLOW [get_runs $base_impl]]
+set part_name  [get_property PART [current_project]]
+# ==============================================================================
+# 函数：准备 Run (不设置 TOP，只创建对象)
+# ==============================================================================
+proc prepare_run_obj {run_prefix base_s base_i flow_s flow_i part} {
+    set s_run "synth_${run_prefix}"
+    set i_run "impl_${run_prefix}"
+
+    if {[get_runs -quiet $s_run] == ""} {
+        puts " -> 创建综合 Run: $s_run"
+        create_run $s_run -flow $flow_s -part $part
+    }
+    
+    if {[get_runs -quiet $i_run] == ""} {
+        puts " -> 创建实现 Run: $i_run"
+        create_run $i_run -parent_run $s_run -flow $flow_i -part $part
+    }
+    return $i_run
+}
+# 1. 准备运行对象
+set tx_impl_run [prepare_run_obj "tx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+set rx_impl_run [prepare_run_obj "rx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+# ==============================================================================
+# 2. 发射 TX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [1/2] 正在配置并启动 TX 任务..."
+# A. 切换全局 Top 为 TX
+set_property top $tx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 TX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *tx*"]
+launch_runs $tx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> TX 任务已在后台启动。"
+# ==============================================================================
+# 3. 发射 RX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [2/2] 正在配置并启动 RX 任务..."
+# A. 切换全局 Top 为 RX
+set_property top $rx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 RX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *rx*"]
+launch_runs $rx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> RX 任务已在后台启动。"
+# ==============================================================================
+# 4. 等待结果并导出
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " 双任务并行编译中，脚本将挂起等待结果 (请勿关闭 Vivado)..."
+# 等待两个运行完成
+wait_on_run $tx_impl_run
+puts "========================================================"
+puts "   开始全量修复 IP 核 (防止 missing module 报错)"
+puts "========================================================"
+# 1. 获取所有 IP 对象
+set all_ips [get_ips *]
+if {$all_ips == ""} {
+    puts " [提示] 工程中没有发现 IP 核，无需修复。"
+} else {
+    foreach ip $all_ips {
+        puts " -> 正在处理 IP: $ip ..."
+        
+        # 2. 重置 IP 状态 (清除旧的关联)
+        reset_target all $ip
+        
+        # 3. 锁定 IP 属性以防止意外改动 (可选)
+        set_property -quiet GENERATE_SYNTH_CHECKPOINT 1 $ip
+        
+        # 4. 重新生成所有输出产物 (Instantiation Template, Synthesis, Simulation)
+        generate_target all $ip
+        
+        # 5. 导出用户文件 (确保仿真和综合能索引到 wrapper)
+        export_ip_user_files -of_objects $ip -no_script -sync -force -quiet
+    }
+    
+    puts "--------------------------------------------------------"
+    puts " 正在为所有 IP 启动独立综合 (Out-of-Context Synthesis)..."
+    puts " 这一步可能需要几分钟，请耐心等待..."
+    
+    # 6. 为所有 IP 创建并启动综合任务
+    create_ip_run $all_ips
+    
+    # 获取所有 IP 的综合 runs
+    set ip_runs [get_runs -filter {IS_IP_RUN == 1 && STATUS != "Complete"}]
+    
+    if {$ip_runs != ""} {
+        launch_runs $ip_runs -jobs 8
+        foreach run $ip_runs {
+            wait_on_run $run
+        }
+    }
+}
+puts "========================================================"
+puts "   开始全量修复 IP 核 (逐个处理模式)"
+puts "========================================================"
+# 1. 获取所有 IP 对象
+set all_ips [get_ips *]
+set runs_to_launch {}
+if {$all_ips == ""} {
+    puts " [提示] 工程中没有发现 IP 核，无需修复。"
+} else {
+    foreach ip $all_ips {
+        puts " -> [1/3] 处理 IP: $ip ..."
+        
+        # A. 重置 IP 状态
+        reset_target all $ip
+        
+        # B. 重新生成输出产物
+        generate_target all $ip
+        
+        # C. 导出用户文件
+        export_ip_user_files -of_objects $ip -no_script -sync -force -quiet
+        
+        # D. ★关键修改★：逐个创建综合任务 (避免 collection error)
+        # 先检查该 IP 是否已经有对应的 run，没有才创建
+        set ip_run_name "${ip}_synth_1"
+        if {[get_runs -quiet $ip_run_name] == ""} {
+            puts "    - 创建综合任务: $ip_run_name"
+            create_ip_run [get_ips $ip]
+        } else {
+            # 如果任务已存在但状态不对，重置它
+            if {[get_property STATUS [get_runs $ip_run_name]] != "Complete"} {
+                reset_run [get_runs $ip_run_name]
+            }
+        }
+        
+        # 收集需要启动的 run
+        lappend runs_to_launch [get_runs $ip_run_name]
+    }
+    
+    puts "--------------------------------------------------------"
+    puts " -> [2/3] 正在启动所有 IP 的综合任务..."
+    
+    # 过滤掉不存在或不需要跑的 run
+    set valid_runs {}
+    foreach r $runs_to_launch {
+        if {$r != "" && [get_property STATUS $r] != "Complete"} {
+            lappend valid_runs $r
+        }
+    }
+
+    if {$valid_runs != ""} {
+        # 并行启动所有 IP 综合
+        launch_runs $valid_runs -jobs 8
+        
+        puts " -> [3/3] 等待 IP 综合完成..."
+        foreach run $valid_runs {
+            wait_on_run $run
+        }
+    } else {
+        puts " -> 所有 IP 看起来都已经是最新的 (Complete)，无需重新综合。"
+    }
+}
+puts "========================================================"
+puts "   所有 IP 核修复完成！"
+puts "   请再次尝试运行双顶层并行编译脚本。"
+puts "========================================================"
+# ==============================================================================
+# Vivado 双顶层并行编译脚本 (修正版)
+# 功能：利用"切换-发射"机制实现并行编译
+# ==============================================================================
+# 1. 配置参数
+set tx_top "fec_tx_fpga_top"
+set rx_top "fec_rx_fpga_top"
+set jobs_cnt 8  ;# 根据 CPU 核心数调整
+puts "--------------------------------------------------------"
+puts " 开始配置双顶层并行编译环境 (Switch-and-Launch 模式)..."
+puts "--------------------------------------------------------"
+# 获取基础配置
+set base_synth "synth_1"
+set base_impl  "impl_1"
+set flow_synth [get_property FLOW [get_runs $base_synth]]
+set flow_impl  [get_property FLOW [get_runs $base_impl]]
+set part_name  [get_property PART [current_project]]
+# ==============================================================================
+# 函数：准备 Run (不设置 TOP，只创建对象)
+# ==============================================================================
+proc prepare_run_obj {run_prefix base_s base_i flow_s flow_i part} {
+    set s_run "synth_${run_prefix}"
+    set i_run "impl_${run_prefix}"
+
+    if {[get_runs -quiet $s_run] == ""} {
+        puts " -> 创建综合 Run: $s_run"
+        create_run $s_run -flow $flow_s -part $part
+    }
+    
+    if {[get_runs -quiet $i_run] == ""} {
+        puts " -> 创建实现 Run: $i_run"
+        create_run $i_run -parent_run $s_run -flow $flow_i -part $part
+    }
+    return $i_run
+}
+# 1. 准备运行对象
+set tx_impl_run [prepare_run_obj "tx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+set rx_impl_run [prepare_run_obj "rx" $base_synth $base_impl $flow_synth $flow_impl $part_name]
+# ==============================================================================
+# 2. 发射 TX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [1/2] 正在配置并启动 TX 任务..."
+# A. 切换全局 Top 为 TX
+set_property top $tx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 TX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *tx*"]
+launch_runs $tx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> TX 任务已在后台启动。"
+# ==============================================================================
+# 3. 发射 RX 任务
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " [2/2] 正在配置并启动 RX 任务..."
+# A. 切换全局 Top 为 RX
+set_property top $rx_top [current_fileset]
+update_compile_order -fileset sources_1
+# B. 重置并启动 RX (生成的脚本将锁定当前的 Top)
+reset_run [get_runs -filter "NAME =~ *rx*"]
+launch_runs $rx_impl_run -to_step write_bitstream -jobs $jobs_cnt
+puts " -> RX 任务已在后台启动。"
+# ==============================================================================
+# 4. 等待结果并导出
+# ==============================================================================
+puts "--------------------------------------------------------"
+puts " 双任务并行编译中，脚本将挂起等待结果 (请勿关闭 Vivado)..."
+# 等待两个运行完成
+wait_on_run $tx_impl_run
+wait_on_run $rx_impl_run
+puts "--------------------------------------------------------"
+puts " 编译结束！开始导出 Bitstream..."
+# 定义导出函数
+proc export_bit {impl_run target_name} {
+    set run_dir [get_property DIRECTORY [get_runs $impl_run]]
+    set bit_files [glob -nocomplain -directory $run_dir *.bit]
+    
+    if {$bit_files != ""} {
+        set src_bit [lindex $bit_files 0]
+        set dst_bit "[pwd]/$target_name"
+        file copy -force $src_bit $dst_bit
+        puts " [成功] 已导出: $target_name"
+    } else {
+        puts " [失败] 在 $impl_run 中未找到 .bit 文件。"
+    }
+}
+export_bit $tx_impl_run "tx_top.bit"
+# 1. 找到 RX 的运行目录
+set rx_dir [get_property DIRECTORY [get_runs impl_rx]]
+# 2. 复制并改名 (自动找到里面的 .bit 文件)
+file copy -force [glob -directory $rx_dir *.bit] ./rx_top.bit
+puts "RX Bitstream 已补救导出！"
+set_property is_global_include false [get_files  C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_Deinterleaver_xpm.v]
+update_compile_order -fileset sources_1

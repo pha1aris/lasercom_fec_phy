@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan 29 22:04:14 2026
+# Process ID         : 45788
+# Current directory  : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx
+# Command line       : vivado.exe -log fec_tx_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fec_tx_fpga_top.tcl
+# Log file           : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/fec_tx_fpga_top.vds
+# Journal file       : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx\vivado.jou
+# Running On         : FSO-A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68263 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78464 MB
+# Available Virtual  : 29644 MB
+#-----------------------------------------------------------
+source fec_tx_fpga_top.tcl -notrace

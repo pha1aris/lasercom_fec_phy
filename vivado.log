@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb  8 22:55:48 2026
+# Process ID         : 45840
+# Current directory  : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent23972 C:\Users\PC\Desktop\fec_verf\prj\fec_lasercom\fec_lasercom.xpr
+# Log file           : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/vivado.log
+# Journal file       : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom\vivado.jou
+# Running On         : FSO-A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68263 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78464 MB
+# Available Virtual  : 38392 MB
+#-----------------------------------------------------------
+start_gui
+Sourcing tcl script 'D:/2024_2/Vivado/2024.2/scripts/Vivado_init.tcl'
+open_project C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2024_2/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1397.109 ; gain = 252.223
+update_compile_order -fileset sources_1
+reset_run impl_tx
+reset_run impl_rx
+launch_runs impl_tx impl_rx -to_step write_bitstream -jobs 32
+[Sun Feb  8 23:02:20 2026] Launched impl_tx, impl_rx...
+Run output will be captured here:
+impl_tx: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/impl_tx/runme.log
+impl_rx: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/impl_rx/runme.log
+# 1. 设置 impl_rx 的顶层为 fec_rx_fpga_top
+set_property TOP fec_rx_fpga_top [get_filesets sources_1]
+# 注意：这会影响整个 Project 的 Active Top。Vivado 不支持在同一个 Project 中同时设两个 Active Top。
+update_compile_order -fileset sources_1
+# 1. 强制将当前设计顶层切换为 RX
+set_property top fec_rx_fpga_top [current_fileset]
+# 2. 重置并重新运行 RX 流程
+reset_run synth_rx
+INFO: [Project 1-1161] Replacing file C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/utils_1/imports/synth_rx/fec_rx_fpga_top.dcp with file C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_rx/fec_rx_fpga_top.dcp
+launch_runs impl_rx -to_step write_bitstream -jobs 8
+[Sun Feb  8 23:12:27 2026] Launched synth_rx...
+Run output will be captured here: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_rx/runme.log
+[Sun Feb  8 23:12:27 2026] Launched impl_rx...
+Run output will be captured here: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/impl_rx/runme.log

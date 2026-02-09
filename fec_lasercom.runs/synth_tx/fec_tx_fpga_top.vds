@@ -1,0 +1,621 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan 29 22:04:14 2026
+# Process ID         : 45788
+# Current directory  : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx
+# Command line       : vivado.exe -log fec_tx_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fec_tx_fpga_top.tcl
+# Log file           : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/fec_tx_fpga_top.vds
+# Journal file       : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx\vivado.jou
+# Running On         : FSO-A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68263 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78464 MB
+# Available Virtual  : 29644 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'D:/2024_2/Vivado/2024.2/scripts/Vivado_init.tcl'
+source fec_tx_fpga_top.tcl -notrace
+Command: synth_design -top fec_tx_fpga_top -part xczu15eg-ffvb1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu15eg'
+INFO: [Device 21-403] Loading part xczu15eg-ffvb1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 33400
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1770.445 ; gain = 190.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fec_tx_fpga_top' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx_fpga_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_sys' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/clk_wiz_sys_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_sys' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/clk_wiz_sys_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'gth_raw_top' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gth_raw_top.v:4]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [D:/2024_2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:76017]
+	Parameter REFCLK_EN_TX_PATH bound to: 1'b0 
+	Parameter REFCLK_HROW_CK_SEL bound to: 2'b00 
+	Parameter REFCLK_ICNTL_RX bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [D:/2024_2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:76017]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter RST_ACTIVE_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [D:/2024_2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2853]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [D:/2024_2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2853]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/gtwizard_ultrascale_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_0' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/gtwizard_ultrascale_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'gth_raw_top' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gth_raw_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_0_prbs_any' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gtwizard_ultrascale_0_prbs_any.v:3]
+	Parameter CHK_MODE bound to: 0 - type: integer 
+	Parameter NBITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_0_prbs_any' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gtwizard_ultrascale_0_prbs_any.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fec_tx' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:3]
+	Parameter W bound to: 32 - type: integer 
+	Parameter PAYLOAD_WORDS bound to: 16 - type: integer 
+	Parameter RS_K bound to: 229 - type: integer 
+	Parameter RS_N bound to: 255 - type: integer 
+	Parameter INTLV_D bound to: 4808 - type: integer 
+	Parameter INTLV_N bound to: 255 - type: integer 
+	Parameter FRAMES_PER_BLOCK bound to: 255 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rs_encode_frontend' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_encode_frontend.v:12]
+INFO: [Synth 8-6157] synthesizing module 'fifo_0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_0' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rs_encoder_0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/rs_encoder_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rs_encoder_0' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/rs_encoder_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rs_encode_frontend' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_encode_frontend.v:12]
+INFO: [Synth 8-6157] synthesizing module 'rs_interleaver_xpm' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:4]
+	Parameter D bound to: 4808 - type: integer 
+	Parameter N bound to: 255 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9050]
+	Parameter MEMORY_SIZE bound to: 8388608 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 8 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 20 - type: integer 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: no_change - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 8 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 20 - type: integer 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:516]
+WARNING: [Synth 8-6896] loop limit (65536) exceeded inside initial block, initial block items will be ignored [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1195]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9050]
+WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'injectsbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'injectdbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank0' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7023] instance 'u_mem_bank0' of module 'xpm_memory_tdpram' has 25 connections declared, but only 19 given [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:203]
+WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7071] port 'injectsbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7071] port 'injectdbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'u_mem_bank1' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+WARNING: [Synth 8-7023] instance 'u_mem_bank1' of module 'xpm_memory_tdpram' has 25 connections declared, but only 19 given [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:246]
+INFO: [Synth 8-6157] synthesizing module 'fifo_8b_flag_sync' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fifo_8b_flag_sync.v:3]
+	Parameter DEPTH bound to: 512 - type: integer 
+	Parameter GUARD bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_8b_flag_sync' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fifo_8b_flag_sync.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rs_interleaver_xpm' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/rs_interleaver_xpm.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gearbox_8to32_bs' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gearbox_8to32_bs.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gearbox_8to32_bs' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gearbox_8to32_bs.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fso_framer' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fso_framer.v:3]
+	Parameter W bound to: 32 - type: integer 
+	Parameter PAYLOAD_WORDS bound to: 16 - type: integer 
+	Parameter FRAMES_PER_BLOCK bound to: 255 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'scrambler' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/AdditiveScrambler.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'scrambler' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/AdditiveScrambler.v:15]
+INFO: [Synth 8-6157] synthesizing module 'crc32' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/crc32.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'crc32' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/crc32.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'fso_framer' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fso_framer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_32w_32r' [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/async_fifo_32w_32r_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_32w_32r' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/.Xil/Vivado-45788-FSO-A/realtime/async_fifo_32w_32r_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fec_tx' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fec_tx_fpga_top' (0#1) [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx_fpga_top.v:4]
+WARNING: [Synth 8-6014] Unused sequential element bs_misaligned_err_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/gearbox_8to32_bs.v:39]
+WARNING: [Synth 8-6014] Unused sequential element first_bs_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fso_framer.v:163]
+WARNING: [Synth 8-6014] Unused sequential element core_rst_d0_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:33]
+WARNING: [Synth 8-6014] Unused sequential element core_rst_d1_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:34]
+WARNING: [Synth 8-6014] Unused sequential element line_rst_d0_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:45]
+WARNING: [Synth 8-6014] Unused sequential element line_rst_d1_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:46]
+WARNING: [Synth 8-6014] Unused sequential element burst_underflow_err_reg was removed.  [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/rtl/fec_tx.v:220]
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port uart_txd driven by constant 1
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port tx_disable[1] driven by constant 0
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port tx_disable[0] driven by constant 0
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_force_lock in module gtwizard_ultrascale_0_prbs_any is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_rxd in module fec_tx_fpga_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp_loss[1] in module fec_tx_fpga_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp_loss[0] in module fec_tx_fpga_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.039 ; gain = 620.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.039 ; gain = 620.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.039 ; gain = 620.969
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2201.039 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/rs_encoder_0/ip/rs_encoder_0/rs_encoder_0/rs_encoder_0_in_context.xdc] for cell 'u_fec_tx/u_rs_encode_frontend/Encoder'
+Finished Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/rs_encoder_0/ip/rs_encoder_0/rs_encoder_0/rs_encoder_0_in_context.xdc] for cell 'u_fec_tx/u_rs_encode_frontend/Encoder'
+Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/fifo_0/ip/fifo_0/fifo_0/fifo_0_in_context.xdc] for cell 'u_fec_tx/u_rs_encode_frontend/fifo0_inst2'
+Finished Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/fifo_0/ip/fifo_0/fifo_0/fifo_0_in_context.xdc] for cell 'u_fec_tx/u_rs_encode_frontend/fifo0_inst2'
+Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc] for cell 'u_clk_wiz'
+Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/async_fifo_32w_32r/ip/async_fifo_32w_32r/async_fifo_32w_32r/async_fifo_32w_32r_in_context.xdc] for cell 'u_fec_tx/u_tx_fifo'
+Finished Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/async_fifo_32w_32r/ip/async_fifo_32w_32r/async_fifo_32w_32r/async_fifo_32w_32r_in_context.xdc] for cell 'u_fec_tx/u_tx_fifo'
+Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc] for cell 'u_gth_raw/u_gth'
+Finished Parsing XDC File [c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc] for cell 'u_gth_raw/u_gth'
+Parsing XDC File [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/constraints/system_cons.xdc]
+Finished Parsing XDC File [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/constraints/system_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/constraints/system_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fec_tx_fpga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fec_tx_fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/2024_2/Vivado/2024.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fec_tx_fpga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fec_tx_fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2282.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2282.793 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'u_fec_tx/u_rs_encode_frontend/fifo0_inst2' at clock pin 'rd_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '64.000' specified during out-of-context synthesis of instance 'u_gth_raw/u_gth' at clock pin 'rxusrclk2_in[0]' is different from the actual clock period '4.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2293.688 ; gain = 713.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu15eg-ffvb1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2293.688 ; gain = 713.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/clk_wiz_sys/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for gthrxn_in. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gthrxn_in. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for gthrxp_in. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gthrxp_in. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for gthtxn_out. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gthtxn_out. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for gthtxp_out. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gthtxp_out. (constraint file  c:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/gtwizard_ultrascale_0/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0/gtwizard_ultrascale_0_in_context.xdc, line 12).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fec_tx/u_rs_encode_frontend/Encoder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fec_tx/u_rs_encode_frontend/fifo0_inst2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fec_tx/u_tx_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_gth_raw/u_gth. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_gth_raw/u_rst_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fec_tx/u_interleaver/u_mem_bank0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fec_tx/u_interleaver/u_mem_bank1. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2293.688 ; gain = 713.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fso_framer'
+INFO: [Synth 8-802] inferred FSM for state register 'lstate_reg' in module 'fec_tx'
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_word_narrow.mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            S_WAIT_FIRST |                           000001 |                              000
+           S_PREAMBLE_HI |                           100000 |                              001
+           S_PREAMBLE_LO |                           010000 |                              010
+                S_HEADER |                           001000 |                              011
+               S_PAYLOAD |                           000100 |                              100
+                   S_CRC |                           000010 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'fso_framer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  L_IDLE |                                0 |                               00
+                 L_BURST |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lstate_reg' using encoding 'sequential' in module 'fec_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2293.688 ; gain = 713.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 5     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   4 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 86    
+	   3 Input      1 Bit         XORs := 17    
+	   5 Input      1 Bit         XORs := 13    
+	   4 Input      1 Bit         XORs := 17    
+	   6 Input      1 Bit         XORs := 5     
+	  12 Input      1 Bit         XORs := 6     
+	  16 Input      1 Bit         XORs := 4     
+	  15 Input      1 Bit         XORs := 5     
+	  28 Input      1 Bit         XORs := 1     
+	  22 Input      1 Bit         XORs := 1     
+	  18 Input      1 Bit         XORs := 4     
+	  14 Input      1 Bit         XORs := 3     
+	  20 Input      1 Bit         XORs := 1     
+	  19 Input      1 Bit         XORs := 2     
+	  13 Input      1 Bit         XORs := 1     
+	   8 Input      1 Bit         XORs := 1     
+	  17 Input      1 Bit         XORs := 2     
+	  21 Input      1 Bit         XORs := 1     
+	  10 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 7     
+	               13 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 512   
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 38    
++---RAMs : 
+	            8192K Bit	(1048576 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 8     
+	   4 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 5     
+	   6 Input   16 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 25    
+	   6 Input    1 Bit        Muxes := 11    
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3528 (col length:168)
+BRAMs: 1488 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP rd_sym_idx, operation Mode is: C+A*(B:0xff).
+DSP Report: operator rd_sym_idx is absorbed into DSP rd_sym_idx.
+DSP Report: operator row_mul_N is absorbed into DSP rd_sym_idx.
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port uart_txd driven by constant 1
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port tx_disable[1] driven by constant 0
+WARNING: [Synth 8-3917] design fec_tx_fpga_top has port tx_disable[0] driven by constant 0
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_rxd in module fec_tx_fpga_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp_loss[1] in module fec_tx_fpga_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp_loss[0] in module fec_tx_fpga_top is either unconnected or has no load
+INFO: [Synth 8-3971] The signal "xpm_memory_tdpram:/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (gen_wr_a.gen_word_narrow.mem_reg_mux_sel_b_pos_4) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (gen_wr_a.gen_word_narrow.mem_reg_mux_sel_b_pos_3) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (gen_wr_a.gen_word_narrow.mem_reg_mux_sel_b_pos_2) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (gen_wr_a.gen_word_narrow.mem_reg_mux_sel_b_pos_1) is unused and will be removed from module xpm_memory_base.
+WARNING: [Synth 8-3332] Sequential element (gen_wr_a.gen_word_narrow.mem_reg_mux_sel_b_pos_0) is unused and will be removed from module xpm_memory_base.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2398.352 ; gain = 818.281
+---------------------------------------------------------------------------------
+ Sort Area is  rd_sym_idx_0 : 0 0 : 445 445 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+|Module Name                             | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                                                 | 
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | 1024 K x 8(NO_CHANGE)  | W | R | 1024 K x 8(NO_CHANGE)  | W | R | Port A and B     | 0      | 256    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | 1024 K x 8(NO_CHANGE)  | W | R | 1024 K x 8(NO_CHANGE)  | W | R | Port A and B     | 0      | 256    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rs_interleaver_xpm | C+A*(B:0xff) | 13     | 8      | 8      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2866.305 ; gain = 1286.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2949.762 ; gain = 1369.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+|Module Name                             | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                                                 | 
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | 1024 K x 8(NO_CHANGE)  | W | R | 1024 K x 8(NO_CHANGE)  | W | R | Port A and B     | 0      | 256    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | 1024 K x 8(NO_CHANGE)  | W | R | 1024 K x 8(NO_CHANGE)  | W | R | Port A and B     | 0      | 256    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
++----------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------------------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_63 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_71 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_79 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_87 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_95 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_103 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_111 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_119 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_127 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_135 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_143 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_151 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_159 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_167 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_175 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_183 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_191 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_199 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_207 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_215 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_223 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_231 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_239 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_247 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_255 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_63 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_71 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_79 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_87 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_95 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_103 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_111 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_119 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_127 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_135 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_143 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_151 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_159 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_167 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_175 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_183 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_191 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_199 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_207 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_215 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_223 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_231 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_239 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_247 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fec_tx/u_interleaver/u_mem_bank1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_255 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 2949.762 ; gain = 1369.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rs_interleaver_xpm | C+A*B       | 13     | 8      | 8      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |clk_wiz_sys           |         1|
+|2     |async_fifo_32w_32r    |         1|
+|3     |fifo_0                |         1|
+|4     |rs_encoder_0          |         1|
+|5     |gtwizard_ultrascale_0 |         1|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+--------------------+------+
+|      |Cell                |Count |
++------+--------------------+------+
+|1     |async_fifo_32w_32r  |     1|
+|2     |clk_wiz_sys         |     1|
+|3     |fifo                |     1|
+|4     |gtwizard_ultrascale |     1|
+|5     |rs_encoder          |     1|
+|6     |BUFG_GT             |     2|
+|7     |CARRY8              |     5|
+|8     |DSP_ALU             |     1|
+|9     |DSP_A_B_DATA        |     1|
+|10    |DSP_C_DATA          |     1|
+|11    |DSP_MULTIPLIER      |     1|
+|12    |DSP_M_DATA          |     1|
+|13    |DSP_OUTPUT          |     1|
+|14    |DSP_PREADD          |     1|
+|15    |DSP_PREADD_DATA     |     1|
+|16    |IBUFDS_GTE4         |     1|
+|17    |LUT1                |    32|
+|18    |LUT2                |   155|
+|19    |LUT3                |  1133|
+|20    |LUT4                |   742|
+|21    |LUT5                |   211|
+|22    |LUT6                |  2269|
+|23    |MUXF7               |   676|
+|24    |MUXF8               |   306|
+|25    |RAMB36E2            |   512|
+|28    |FDCE                |  4948|
+|29    |FDPE                |    53|
+|30    |FDRE                |    10|
+|31    |FDSE                |     8|
+|32    |IBUF                |     1|
+|33    |OBUF                |     3|
++------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 3099.020 ; gain = 1426.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3099.020 ; gain = 1518.949
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.171 . Memory (MB): peak = 3099.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 989 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3099.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+Synth Design complete | Checksum: 2690bdc8
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 3099.020 ; gain = 2596.984
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 3099.020 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_tx/fec_tx_fpga_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fec_tx_fpga_top_utilization_synth.rpt -pb fec_tx_fpga_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 29 22:05:23 2026...

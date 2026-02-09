@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jan 27 20:49:05 2026
+# Process ID         : 38088
+# Current directory  : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent40900 C:\Users\PC\Desktop\fec_verf\prj\fec_lasercom\fec_lasercom.xpr
+# Log file           : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/vivado.log
+# Journal file       : C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom\vivado.jou
+# Running On         : FSO-A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 68263 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78464 MB
+# Available Virtual  : 46265 MB
+#-----------------------------------------------------------
+start_gui
+Sourcing tcl script 'D:/2024_2/Vivado/2024.2/scripts/Vivado_init.tcl'
+open_project C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/2024_2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2024_2/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+close [ open C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/fec_tx_fpga_top.v w ]
+add_files C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.srcs/sources_1/new/fec_tx_fpga_top.v
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0.xci}
+INFO: [Device 21-403] Loading part xczu15eg-ffvb1156-2-i
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/PC/Desktop/fec_verf/project_1.gen/sources_1/ip/clk_wiz_sys'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/gtwizard_ultrascale_0/gtwizard_ultrascale_0.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/PC/Desktop/fec_verf/project_1.gen/sources_1/ip/gtwizard_ultrascale_0'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+add_files: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2523.820 ; gain = 1097.578
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/fec_tx.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/gth_raw_top.v
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/PC/Desktop/fec_verf/src/sources_1/new/1/crc32.v C:/Users/PC/Desktop/fec_verf/src/sources_1/new/1/AdditiveScrambler.v C:/Users/PC/Desktop/fec_verf/src/sources_1/new/1/bit_aligner_ind.v C:/Users/PC/Desktop/fec_verf/src/sources_1/new/1/fso_framer.v C:/Users/PC/Desktop/fec_verf/src/sources_1/new/1/fso_deframer.v}
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/rs_interleaver_xpm.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/rs_encode_frontend.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/gearbox_8to32_bs.v
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/async_fifo_32w_32r/async_fifo_32w_32r.xci
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/async_fifo_32w_32r/async_fifo_32w_32r.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/PC/Desktop/fec_verf/project_1.gen/sources_1/ip/async_fifo_32w_32r'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/PC/Desktop/fec_verf/src/constrs_1/new/system_cons.xdc
+set_property top fec_tx_fpga_top [current_fileset]
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/fifo_0/fifo_0.xci
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/PC/Desktop/fec_verf/src/sources_1/ip/fifo_0/fifo_0.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/PC/Desktop/fec_verf/project_1.gen/sources_1/ip/fifo_0'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/PC/Desktop/fec_verf/src/sources_1/new/fifo_8b_flag_sync.v
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 32
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'async_fifo_32w_32r'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: async_fifo_32w_32r
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_0'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: fifo_0
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gtwizard_ultrascale_0'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: gtwizard_ultrascale_0
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_sys'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_sys'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_sys
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Jan 27 21:02:20 2026] Launched fifo_0_synth_1, clk_wiz_sys_synth_1, async_fifo_32w_32r_synth_1, gtwizard_ultrascale_0_synth_1...
+Run output will be captured here:
+fifo_0_synth_1: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/fifo_0_synth_1/runme.log
+clk_wiz_sys_synth_1: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/clk_wiz_sys_synth_1/runme.log
+async_fifo_32w_32r_synth_1: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/async_fifo_32w_32r_synth_1/runme.log
+gtwizard_ultrascale_0_synth_1: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/gtwizard_ultrascale_0_synth_1/runme.log
+[Tue Jan 27 21:02:20 2026] Launched synth_1...
+Run output will be captured here: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2523.820 ; gain = 0.000
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Jan 27 21:09:47 2026] Launched synth_1...
+Run output will be captured here: C:/Users/PC/Desktop/fec_verf/prj/fec_lasercom/fec_lasercom.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 27 21:48:37 2026...
